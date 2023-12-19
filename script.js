@@ -59,11 +59,17 @@ function mostrarForca(forca) {
 
     if (forca < 30) {
         document.getElementById("msgSenhaForca").innerHTML = "<span style='color: #ff0000'>Senha fraca</span>";
-    } else if ((forca >= 30) && (forca < 50)) {
+    }
+
+    else if ((forca >= 30) && (forca < 50)) {
         document.getElementById("msgSenhaForca").innerHTML = "<span style='color: #FFD700'>Senha média</span>";
-    } else if ((forca >= 50) && (forca < 70)) {
+    }
+
+    else if ((forca >= 50) && (forca < 70)) {
         document.getElementById("msgSenhaForca").innerHTML = "<span style='color: #7FFF00'>Senha forte</span>";
-    } else if ((forca >= 70) && (forca < 100)) {
+    }
+
+    else if ((forca >= 70) && (forca < 100)) {
         document.getElementById("msgSenhaForca").innerHTML = "<span style='color: #008000'>Senha excelente</span>";
     }
 }
@@ -87,7 +93,7 @@ class Aluno {
         this.areaInteresse = areaInteresse;
         this.termosDeUso = autoSizingCheck;
     }
-    //convertendo o OBJ pata JSON
+    //convertendo o OBJ para JSON
     convertendoParaJSON() {
         return {
             cpf: this.cpf,
