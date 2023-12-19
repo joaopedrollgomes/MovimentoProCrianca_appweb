@@ -88,14 +88,28 @@ class Aluno {
         this.termosDeUso = autoSizingCheck;
     }
     //convertendo o OBJ pata JSON
-    jsonConvertString(aluno) {
-        let jsonConvert = JSON.stringify(aluno, null, 2);
-        window.alert(jsonConvert);
+    convertendoParaJSON() {
+        return {
+            cpf: this.cpf,
+            nomeCompleto: this.nomeCompleto,
+            dataNascimento: this.dataNascimento,
+            telefone: this.telefone,
+            email: this.email,
+            cidade: this.cidade,
+            bairro: this.bairro,
+            disponibilidade: this.disponibilidade,
+            //senha: this._senha,
+            areaInteresse: this.areaInteresse,
+            termosDeUso: this.termosDeUso
+        };
     }
 }
 
-//Obtendo os dados fornecidos
-const dadosAluno = () => {
+//Onde cada aluno será armazenado.
+const listaDeAlunos = [];
+
+//Captando os dados fornecidos
+const addAluno = () => {
     let cpf = document.getElementById('cpf').value;
     let nomeCompleto = document.getElementById('nomeCompleto').value;
     let dataNascimento = document.getElementById('dataNascimento').value;
@@ -107,7 +121,7 @@ const dadosAluno = () => {
     let manha = document.getElementById('manhaCheckbox');
     let tarde = document.getElementById('tardeCheckbox');
     let noite = document.getElementById('noiteCheckbox');
-    
+
     let senha = document.getElementById('senha').value;
     let areaInteresse = document.getElementById('areaInteresse').value;
     let termosDeUso = document.getElementById('autoSizingCheck').checked;
@@ -115,28 +129,61 @@ const dadosAluno = () => {
     let disponibilidade = [];
 
     if (manha.checked && tarde.checked && noite.checked) {
-        disponibilidade = [manha.value, tarde.value, noite.value];
+        disponibilidade.push(manha.value, tarde.value, noite.value);
     }
     else if (manha.checked && tarde.checked) {
-        disponibilidade = [manha.value, tarde.value];
+        disponibilidade.push(manha.value, tarde.value);
     }
     else if (manha.checked && noite.checked) {
-        disponibilidade = [manha.value, noite.value];
+        disponibilidade.push(manha.value, noite.value);
     }
-    else if (noite.checked && tarde.checked) {
-        disponibilidade = [noite.value, tarde.value];
+    else if (tarde.checked && noite.checked) {
+        disponibilidade.push(tarde.value, noite.value);
     }
     else if (manha.checked) {
-        disponibilidade = [manha.value];
+        disponibilidade.push(manha.value);
     }
     else if (tarde.checked) {
-        disponibilidade = [tarde.value];
+        disponibilidade.push(tarde.value);
     }
     else if (noite.checked) {
-        disponibilidade = [noite.value];
+        disponibilidade.push(noite.value);
     }
 
-    let aluno;
-    aluno = new Aluno(cpf, nomeCompleto, dataNascimento, telefone, email, cidade, bairro, disponibilidade, senha, areaInteresse, termosDeUso);
-    aluno.jsonConvertString(aluno);
+    let aluno = new Aluno(cpf, nomeCompleto, dataNascimento, telefone, email, cidade, bairro, disponibilidade, senha, areaInteresse, termosDeUso);
+
+    //Add Aluno à lista
+    listaDeAlunos.push(aluno);
+
+    converterListaParaJSON();
+
+    limparCamposFormulario();
 }
+
+//convertendo a lista de alunos para JSON
+const converterListaParaJSON = () => {
+    let listaJSON = listaDeAlunos.map(aluno => aluno.convertendoParaJSON());
+    let jsonConvert = JSON.stringify(listaJSON, null, 2);
+    window.alert(jsonConvert);
+    console.log(jsonConvert);
+}
+
+//função que limpa os campos do formulário
+const limparCamposFormulario = () => {
+    document.getElementById('cpf').value = '';
+    document.getElementById('nomeCompleto').value = '';
+    document.getElementById('dataNascimento').value = '';
+    document.getElementById('telefone').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('cidade').value = '';
+    document.getElementById('bairro').value = '';
+
+    document.getElementById('manhaCheckbox').checked = true;
+    document.getElementById('tardeCheckbox').checked = false;
+    document.getElementById('noiteCheckbox').checked = false;
+
+    document.getElementById('senha').value = '';
+    document.getElementById('senhaConfere').value = '';
+    document.getElementById('areaInteresse').value = '';
+    document.getElementById('autoSizingCheck').checked = false;
+};
