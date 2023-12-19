@@ -104,7 +104,7 @@ class Aluno {
             cidade: this.cidade,
             bairro: this.bairro,
             disponibilidade: this.disponibilidade,
-            //senha: this._senha,
+            senha: this._senha,
             areaInteresse: this.areaInteresse,
             termosDeUso: this.termosDeUso
         };
