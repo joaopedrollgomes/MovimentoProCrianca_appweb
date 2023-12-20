@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Busca</title>
+</head>
+<body>
+    <header class="d-flex justify-content-center capa">
+
+        <nav class="d-flex align-items-center justify-content-between position-absolute top-0 start-0 end-0 me-5 p-2">
+            <img id="logo" src="assets/logo.png" alt="logo escrito em azul Pró criança">
+
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Menu</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <button type="button" class="btn btn-outline-primary d-block mb-2">Login</button>
+                    <button type="button" class="btn btn-outline-primary d-block">???</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="search-box">
+        <input type="text" class="search-txt" placeholder="Pesquisar Alunos">
+        <a href="#" class="search-btn">
+            <img src="assets/loupe.png" alt="Lupa" height="20" width="20">
+        </a>
+    </div>
+
+    <footer class="text-center font-weight-bold fs-6 mt-5 ms-2 p-2">Copyrigth © 1993 - 2018 Movimento Pró-Criança. CNPJ:
+        02.539.347/0001-32
+    
+    </footer>
+</body>
+</html>
+
