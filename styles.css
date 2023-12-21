@@ -44,7 +44,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: bisque;
+    background-color: #ebebeb;
     height: 40px;
     padding: 10px;
     border-radius: 40px;
@@ -68,7 +68,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #f0f5fb;
+    background: #ffffff;
     display: flex ;
     justify-content: center;
     align-items: center;
@@ -83,3 +83,6 @@
     background: #f0f5fb;
 }
 
+.search-txt::placeholder {
+    color: #000000;
+}
