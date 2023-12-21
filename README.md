@@ -1,7 +1,5 @@
 # Movimento Pró-Criança - Aplicação de Cadastro para Banco de Talentos
 
-## https://cadastroprocrianca.netlify.app/ <-----teste do site 
-
 ## Descrição do Projeto
 
 O projeto consiste no desenvolvimento de uma aplicação web dedicada ao cadastro e gerenciamento do Banco de Talentos do Movimento Pró-Criança (MPC). O objetivo principal é facilitar a identificação e encaminhamento de beneficiários (alunos) para cursos e oportunidades no mercado de trabalho, fortalecendo assim o apoio oferecido pelo MPC.
