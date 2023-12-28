@@ -86,3 +86,12 @@
 .search-txt::placeholder {
     color: #000000;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem; 
+    padding: 1rem;
+}
