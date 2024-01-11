@@ -11,28 +11,35 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-center capa">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #12567d;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="/assets/logo.png" alt="logo escrito em azul Pró criança">
+            </a>
 
-        <nav class="d-flex align-items-center justify-content-between position-absolute top-0 start-0 end-0 me-5 p-2">
-            <a href="index.html"><img id="logo" src="/assets/logo.png" alt="logo escrito em azul Pró criança"></a>
+            <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Menu</button>
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <button type="button" class="btn btn-outline-primary d-block mb-2">Login</button>
-                    <button type="button" class="btn btn-outline-primary d-block">???</button>
-                    <a href="pesquisa.html"><button type="button" class="btn btn-outline-primary d-block">Pagina Adm (pesquisa perfil)</button></a>
-                </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link text-white text-decoration-underline">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white text-decoration-underline">Quem somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pesquisa.html" class="nav-link text-white text-decoration-underline">Portal do
+                            colaborador</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-
+        </div>
+    </nav>
+    <header class="capa d-flex">
         <div
             class="text-white text-center d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
             <h1 class="display-4 tituloH1">Trabalhe conosco</h1>
@@ -51,9 +58,9 @@
         <h4>Cadastre-se no nosso banco de talentos</h4>
     </div>
 
-    <div class="container mt-3">
+    <div class="container mt-3  mb-5">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body mb-5">
                 <form onsubmit="addAluno(); return false;">
                     <div class="row">
                         <div class="col-md-6">
@@ -123,14 +130,17 @@
                             <div class="form-group mb-3">
                                 <label>Disponibilidade:</label>
                                 <div class="form-check form-check-inline">
-                                    <input type="checkbox" class="form-check-input" value="Manhã" id="manhaCheckbox" checked>
+                                    <input type="checkbox" class="form-check-input" value="Manhã" id="manhaCheckbox"
+                                        checked>
                                     <label class="form-check-label" for="manhaCheckbox">Manhã</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input type="checkbox" class="form-check-input" value="Tarde" id="tardeCheckbox">
+                                    <input type="checkbox" class="form-check-input" value="Tarde" id="tardeCheckbox">
                                     <label class="form-check-label" for="tardeCheckbox">Tarde</label>
                                 </div>
                                 <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" value="Noite" id="noiteCheckbox">
                                     <input type="checkbox" class="form-check-input" value="Noite" id="noiteCheckbox">
                                     <label class="form-check-label" for="noiteCheckbox">Noite</label>
                                 </div>
@@ -154,7 +164,7 @@
         </div>
     </div>
 
-    <footer class="text-center font-weight-bold fs-6 mt-5 ms-2 p-2">Copyrigth © 1993 - 2018 Movimento Pró-Criança. CNPJ:
+    <footer class="d-none d-sm-block">Copyright © 1993 - 2018 Movimento Pró-Criança. CNPJ:
         02.539.347/0001-32</footer>
 
 
