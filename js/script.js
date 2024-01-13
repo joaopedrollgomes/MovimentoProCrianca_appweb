@@ -1,11 +1,13 @@
 
-// biblioteca que coloca o formato nos campos
+//Biblioteca cloudflare inputmask -> Formata os campos
 $(document).ready(function () {
     $('#cpf').inputmask('999.999.999-99');
 });
+
 $(document).ready(function () {
     $('#telefone').inputmask('(99) 99999-9999');
 });
+
 $(document).ready(function () {
     $('#dataNascimento').inputmask('99/99/9999');
 });
@@ -94,21 +96,21 @@ class Aluno {
         this.termosDeUso = autoSizingCheck;
     }
     //convertendo o OBJ para JSON
-    convertendoParaJSON() {
-        return {
-            cpf: this.cpf,
-            nomeCompleto: this.nomeCompleto,
-            dataNascimento: this.dataNascimento,
-            telefone: this.telefone,
-            email: this.email,
-            cidade: this.cidade,
-            bairro: this.bairro,
-            disponibilidade: this.disponibilidade,
-            senha: this._senha,
-            areaInteresse: this.areaInteresse,
-            termosDeUso: this.termosDeUso
-        };
-    }
+    // convertendoParaJSON() {
+    //     return {
+    //         cpf: this.cpf,
+    //         nomeCompleto: this.nomeCompleto,
+    //         dataNascimento: this.dataNascimento,
+    //         telefone: this.telefone,
+    //         email: this.email,
+    //         cidade: this.cidade,
+    //         bairro: this.bairro,
+    //         disponibilidade: this.disponibilidade,
+    //         senha: this._senha,
+    //         areaInteresse: this.areaInteresse,
+    //         termosDeUso: this.termosDeUso
+    //     };
+    // }
 }
 
 //Onde cada aluno será armazenado.
@@ -161,18 +163,20 @@ const addAluno = () => {
     //Add Aluno à lista
     listaDeAlunos.push(aluno);
 
-    converterListaParaJSON();
+    localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunos));
+    //window.alert(JSON.stringify(listaDeAlunos, null, 2));
+    // converterListaParaJSON();
 
     limparCamposFormulario();
 }
 
 //convertendo a lista de alunos para JSON
-const converterListaParaJSON = () => {
-    let listaJSON = listaDeAlunos.map(aluno => aluno.convertendoParaJSON());
-    let jsonConvert = JSON.stringify(listaJSON, null, 2);
-    window.alert(jsonConvert);
-    console.log(jsonConvert);
-}
+// const converterListaParaJSON = () => {
+//     let listaJSON = listaDeAlunos.map(aluno => aluno.convertendoParaJSON());
+//     let jsonConvert = JSON.stringify(listaJSON, null, 2);
+//     window.alert(jsonConvert);
+//     console.log(jsonConvert);
+// }
 
 //função que limpa os campos do formulário
 const limparCamposFormulario = () => {
