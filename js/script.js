@@ -166,8 +166,9 @@ const addAluno = () => {
     localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunos));
     //window.alert(JSON.stringify(listaDeAlunos, null, 2));
     // converterListaParaJSON();
-
+    window.alert("Cadastro efetuado com sucesso!");
     limparCamposFormulario();
+     //localStorage.clear();
 }
 
 //convertendo a lista de alunos para JSON
