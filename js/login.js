@@ -7,20 +7,20 @@ const login = () => {
     const listaDeAlunosLocal = JSON.parse(localStorage.getItem('listaDeAlunos'));
     let cpfLogin = document.getElementById('cpfLogin').value;
     let senhaLogin = document.getElementById('senhaLogin').value;
+    let indiceDoAluno = listaDeAlunosLocal.findIndex(aluno => aluno.cpf === cpfLogin);
 
-    const indiceDoAluno = listaDeAlunosLocal.findIndex(aluno => aluno.cpf === cpfLogin);
-        
     //Verifica se o aluno existe
     if (indiceDoAluno !== -1) {
-        if (senhaLogin === listaDeAlunosLocal[indiceDoAluno]._senha) {
-            window.alert("Login realizado");
+        if (senhaLogin === listaDeAlunosLocal[indiceDoAluno]._senha && cpfLogin === listaDeAlunosLocal[indiceDoAluno].cpf) {
+            //Armazenando indice
+            localStorage.setItem('indice', indiceDoAluno);
+            window.location.href = 'perfilUser.html';
         }
         else {
             window.alert("Dados não encontrados, tente novamente.");
             //console.log(listaDeAlunosLocal);
-            //window.location.href = 'perfil.html';
         }
-    } 
+    }
     else {
         window.alert("Usuário não encontrado, tente novamente ou cadastre-se");
     }
@@ -28,5 +28,6 @@ const login = () => {
 }
 
 const limparCamposLogin = () => {
+    document.getElementById('cpfLogin').value = '';
     document.getElementById('senhaLogin').value = '';
 };
