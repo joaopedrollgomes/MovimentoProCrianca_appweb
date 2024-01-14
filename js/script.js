@@ -202,4 +202,15 @@ const clearLocalStorage = () => {
     localStorage.clear();
 }
 
-//document.addEventListener('DOMContentLoaded', clearLocalStorage);
+// document.addEventListener('DOMContentLoaded', clearLocalStorage);
+
+let logado = localStorage.getItem('logado');
+
+const mudancaDePagina = () => {
+    if (logado) {
+        // document.getElementById('indexBody').innerHTML = 'Página não encontrada';
+        window.alert("Acesso negado!");
+        window.location.href = 'perfilUser.html';
+    }
+}
+document.addEventListener('DOMContentLoaded', mudancaDePagina);
