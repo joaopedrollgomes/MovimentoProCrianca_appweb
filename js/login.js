@@ -14,6 +14,7 @@ const login = () => {
         if (senhaLogin === listaDeAlunosLocal[indiceDoAluno]._senha && cpfLogin === listaDeAlunosLocal[indiceDoAluno].cpf) {
             //Armazenando indice
             localStorage.setItem('indice', indiceDoAluno);
+            localStorage.setItem('logado', true);
             window.location.href = 'perfilUser.html';
         }
         else {
