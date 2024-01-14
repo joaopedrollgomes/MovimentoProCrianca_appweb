@@ -19,13 +19,16 @@ const dadosPerfilAluno = () => {
     const alunoLogado = listaDeAlunosLocal[indiceAlunoLogado];
 
             // Preencher os campos do formulário com os dados do aluno logado
+            document.getElementById('nomeCompletoPerfil').innerHTML = alunoLogado.nomeCompleto;
+
             document.getElementById('cpfPerfil').value = alunoLogado.cpf;
-            document.getElementById('nomeCompletoPerfil').value = alunoLogado.nomeCompleto;
             document.getElementById('dataNascimentoPerfil').value = alunoLogado.dataNascimento;
             document.getElementById('emailPerfil').value = alunoLogado.email;
             document.getElementById('telefonePerfil').value = alunoLogado.telefone;
             document.getElementById('cidadePerfil').value = alunoLogado.cidade;
             document.getElementById('bairroPerfil').value = alunoLogado.bairro;
+            document.getElementById('areaInteressePerfil').value = alunoLogado.areaInteresse;
+            document.getElementById('disponibilidadePerfil').value = alunoLogado.disponibilidade;
 }
 
 document.addEventListener('DOMContentLoaded', dadosPerfilAluno);

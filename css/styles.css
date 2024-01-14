@@ -109,6 +109,16 @@ footer {
     margin-bottom: 2%;
 }
 
+.nomeCompletoPerfil{
+
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .botoes{
     display: flex;
     justify-content:space-evenly;
