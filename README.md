@@ -31,8 +31,31 @@ O projeto consiste no desenvolvimento de uma aplicação web dedicada ao cadastr
 
 ### Tecnologias Utilizadas
 
-- A aplicação será desenvolvida utilizando tecnologias web modernas, garantindo uma experiência responsiva e acessível.
+- A aplicação será desenvolvida utilizando tecnologias web modernas como, HTML, CSS, Javascript e Bootstrap, garantindo uma experiência responsiva e acessível.
 
 ### Próximos Passos
 
 O desenvolvimento do projeto seguirá um cronograma definido, envolvendo etapas de concepção, design, implementação e testes, será utilizado a plataforma Trello e adotaremos a metodologia ágil de gestão SCRUM. A colaboração com a equipe do MPC garantirá que a aplicação atenda de maneira eficaz às necessidades específicas do Movimento Pró-Criança.
+
+### Equipe 
+
+ <img src="assets/Danilo.jpeg" width=100 >
+    **Danilo José**
+        Desenvolvedor  
+ <img src="assets/Edenize.jpeg" with=100>
+    **Edenize Souza**
+        Desenvolvedor
+ <img src="assets/Ednaldo.jpeg" width=100>
+    **Ednaldo Pereira**
+        Desenvolvedor
+ <img src="assets/João Pedro.jpeg" width=100>
+    **João Pedro**
+          Scrum Master
+ <img src="assets/Marcela.jpeg" width=100>
+    **Marcela Ellen**
+      Desenvolvedor
+ <img src="assets/Rayanne.jpeg" width=100>      
+     **Rayanne Santos**
+        Desenvolvedor
+
+
