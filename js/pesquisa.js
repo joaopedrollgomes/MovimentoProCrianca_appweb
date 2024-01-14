@@ -9,8 +9,6 @@ const mudancaDePagina = () => {
   >`;
 
         document.getElementById('linkPaginaInicial').href = "#";
-
     }
-
 }
 document.addEventListener('DOMContentLoaded', mudancaDePagina);

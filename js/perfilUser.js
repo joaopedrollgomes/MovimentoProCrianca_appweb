@@ -42,11 +42,3 @@ const dadosPerfilAluno = () => {
 }
 
 document.addEventListener('DOMContentLoaded', dadosPerfilAluno);
-
-// const mudancaDePagina = () => {
-//     if (logado) {
-//         document.getElementById('linkPaginaInicial').href = "#";
-//     }
-
-// }
-// document.addEventListener('DOMContentLoaded', mudancaDePagina);

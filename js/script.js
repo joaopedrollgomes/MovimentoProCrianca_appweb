@@ -168,7 +168,6 @@ const addAluno = () => {
     // converterListaParaJSON();
     window.alert("Cadastro efetuado com sucesso!");
     limparCamposFormulario();
-    //localStorage.clear();
 }
 
 //convertendo a lista de alunos para JSON
@@ -198,3 +197,9 @@ const limparCamposFormulario = () => {
     document.getElementById('areaInteresse').value = '';
     document.getElementById('autoSizingCheck').checked = false;
 };
+
+const clearLocalStorage = () => {
+    localStorage.clear();
+}
+
+//document.addEventListener('DOMContentLoaded', clearLocalStorage);
