@@ -40,22 +40,21 @@ O desenvolvimento do projeto seguirá um cronograma definido, envolvendo etapas 
 ### Equipe 
 
  <img src="assets/Danilo.jpeg" width=100 >
-    **Danilo José**
-        Desenvolvedor  
- <img src="assets/Edenize.jpeg" with=100>
-    **Edenize Souza**
-        Desenvolvedor
+  Danilo José - Desenvolvedor
+        
+ <img src="assets/Edenize.jpeg" width=100>
+    Edenize Monteiro - Desenvolvedor 
+       
  <img src="assets/Ednaldo.jpeg" width=100>
-    **Ednaldo Pereira**
-        Desenvolvedor
+   Ednaldo Pereira - Desenvolvedor 
+    
  <img src="assets/João Pedro.jpeg" width=100>
-    **João Pedro**
-          Scrum Master
+  João Pedro - Scrum Master
+  
  <img src="assets/Marcela.jpeg" width=100>
-    **Marcela Ellen**
-      Desenvolvedor
+   Marcela Ellen - Desenvolvedor
+    
  <img src="assets/Rayanne.jpeg" width=100>      
-     **Rayanne Santos**
-        Desenvolvedor
+    Rayanne Santos - Desenvolvedor 
 
 
