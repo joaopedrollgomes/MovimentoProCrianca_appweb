@@ -55,3 +55,29 @@ $(document).ready(function () {
         $('#areaInteresseEditar').val($("#areaInteressePerfil").val())
     });
 });
+
+const sairDoPerfil = () => {
+    let confirma = window.confirm("Deseja realmente sair do seu perfil ?");
+
+    if (confirma) {
+        localStorage.removeItem('logado');
+
+        document.getElementById('nomeCompletoPerfil').innerHTML = "";
+        document.getElementById('cpfPerfil').value = "";
+        document.getElementById('dataNascimentoPerfil').value = "";
+        document.getElementById('emailPerfil').value = "";
+        document.getElementById('telefonePerfil').value = "";
+        document.getElementById('cidadePerfil').value = "";
+        document.getElementById('bairroPerfil').value = "";
+        document.getElementById('areaInteressePerfil').value = "";
+        document.getElementById('disponibilidadePerfil').value = "";
+
+        window.location.href = 'login.html';
+    }
+}
+
+let buttonSairPerfil = document.getElementById('buttonSairPerfil');
+
+buttonSairPerfil.addEventListener('click', () => {
+    sairDoPerfil();
+})
