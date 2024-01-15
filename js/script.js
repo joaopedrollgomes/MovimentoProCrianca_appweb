@@ -5,6 +5,10 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $('#cpfLoginColaborador').inputmask('999.999.999-99');
+});
+
+$(document).ready(function () {
     $('#telefone').inputmask('(99) 99999-9999');
 });
 

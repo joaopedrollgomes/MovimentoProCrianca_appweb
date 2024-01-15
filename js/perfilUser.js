@@ -14,7 +14,7 @@ $(document).ready(function () {
 let logado = localStorage.getItem('logado');
 
 const dadosPerfilAluno = () => {
-    
+
     if (logado) {
         document.getElementById('linkPaginaInicial').href = "#";
     }
@@ -42,3 +42,16 @@ const dadosPerfilAluno = () => {
 }
 
 document.addEventListener('DOMContentLoaded', dadosPerfilAluno);
+
+
+$(document).ready(function () {
+    $("#btnEditar").click(function () {
+        $("#cpfEditar").val($("#cpfPerfil").val());
+        /*$("#dataNascimentoEditar").val($("#dataNascimentoPerfil").val());*/ //essa bosta não quer pegar
+        $('#telefoneEditar').val($("#telefonePerfil").val())
+        $('#emailEditar').val($("#emailPerfil").val())
+        $('#cidadeEditar').val($("#cidadePerfil").val())
+        $('#bairroEditar').val($("#bairroPerfil").val())
+        $('#areaInteresseEditar').val($("#areaInteressePerfil").val())
+    });
+});

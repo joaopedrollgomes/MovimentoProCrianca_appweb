@@ -2,6 +2,9 @@
 $(document).ready(function () {
     $('#cpfLogin').inputmask('999.999.999-99');
 });
+$(document).ready(function () {
+    $('#cpfLoginColaborador').inputmask('999.999.999-99');
+});
 
 const login = () => {
     const listaDeAlunosLocal = JSON.parse(localStorage.getItem('listaDeAlunos'));
