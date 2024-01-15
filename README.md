@@ -39,22 +39,8 @@ O desenvolvimento do projeto seguirá um cronograma definido, envolvendo etapas 
 
 ### Equipe 
 
- <img src="assets/Danilo.jpeg" width=100 >
-  Danilo José - Desenvolvedor
-        
- <img src="assets/Edenize.jpeg" width=100>
-    Edenize Monteiro - Desenvolvedor 
-       
- <img src="assets/Ednaldo.jpeg" width=100>
-   Ednaldo Pereira - Desenvolvedor 
-    
- <img src="assets/João Pedro.jpeg" width=100>
-  João Pedro - Scrum Master
-  
- <img src="assets/Marcela.jpeg" width=100>
-   Marcela Ellen - Desenvolvedor
-    
- <img src="assets/Rayanne.jpeg" width=100>      
-    Rayanne Santos - Desenvolvedor 
+| <img src="assets/Danilo.jpeg" width=100 > | <img src="assets/Edenize.jpeg" width=100 > | <img src="assets/Ednaldo.jpeg" width=100> | <img src="assets/João Pedro.jpeg" width=100> | <img src="assets/Marcela.jpeg" width=100> | <img src="assets/Rayanne.jpeg" width=100> |
+| ---------------------------------------- | --------------------------------------- | -------------------------------------- | ----------------------------------------- | -------------------------------------- | ---------------------------------------- |
+| Danilo José - Líder técnico               | Edenize Monteiro - Desenvolvedor        | Ednaldo Pereira - Desenvolvedor         | João Pedro - Scrum Master && git manager    | Marcela Ellen - Líder de design && git manager   | Rayanne Santos - Tester           |
 
 
