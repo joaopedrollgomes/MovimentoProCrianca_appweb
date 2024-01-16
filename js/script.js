@@ -141,37 +141,45 @@ const addAluno = () => {
     let disponibilidade = [];
 
     if (manha.checked && tarde.checked && noite.checked) {
-        disponibilidade.push(manha.value, tarde.value, noite.value);
-    }
-    else if (manha.checked && tarde.checked) {
-        disponibilidade.push(manha.value, tarde.value);
-    }
-    else if (manha.checked && noite.checked) {
-        disponibilidade.push(manha.value, noite.value);
-    }
-    else if (tarde.checked && noite.checked) {
-        disponibilidade.push(tarde.value, noite.value);
-    }
-    else if (manha.checked) {
-        disponibilidade.push(manha.value);
-    }
-    else if (tarde.checked) {
-        disponibilidade.push(tarde.value);
-    }
-    else if (noite.checked) {
-        disponibilidade.push(noite.value);
+        document.getElementById("msgDisponibilidade").innerHTML = "";
+
+        if (manha.checked && tarde.checked && noite.checked) {
+            disponibilidade.push(manha.value, tarde.value, noite.value);
+        }
+        else if (manha.checked && tarde.checked) {
+            disponibilidade.push(manha.value, tarde.value);
+        }
+        else if (manha.checked && noite.checked) {
+            disponibilidade.push(manha.value, noite.value);
+        }
+        else if (tarde.checked && noite.checked) {
+            disponibilidade.push(tarde.value, noite.value);
+        }
+        else if (manha.checked) {
+            disponibilidade.push(manha.value);
+        }
+        else if (tarde.checked) {
+            disponibilidade.push(tarde.value);
+        }
+        else if (noite.checked) {
+            disponibilidade.push(noite.value);
+        }
+
+        let aluno = new Aluno(cpf, nomeCompleto, dataNascimento, telefone, email, cidade, bairro, disponibilidade, senha, areaInteresse, termosDeUso);
+
+        //Add Aluno à lista
+        listaDeAlunos.push(aluno);
+
+        localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunos));
+        //window.alert(JSON.stringify(listaDeAlunos, null, 2));
+        // converterListaParaJSON();
+        window.alert("Cadastro efetuado com sucesso!");
+        limparCamposFormulario();
     }
 
-    let aluno = new Aluno(cpf, nomeCompleto, dataNascimento, telefone, email, cidade, bairro, disponibilidade, senha, areaInteresse, termosDeUso);
-
-    //Add Aluno à lista
-    listaDeAlunos.push(aluno);
-
-    localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunos));
-    //window.alert(JSON.stringify(listaDeAlunos, null, 2));
-    // converterListaParaJSON();
-    window.alert("Cadastro efetuado com sucesso!");
-    limparCamposFormulario();
+    else {
+        document.getElementById("msgDisponibilidade").innerHTML = "<span style='color: #ff0000'>Selecione pelo menos uma opção de disponibilidade.</span>";
+    }
 }
 
 //convertendo a lista de alunos para JSON

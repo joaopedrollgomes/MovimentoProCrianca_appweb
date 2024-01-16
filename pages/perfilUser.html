@@ -136,7 +136,7 @@
 
               <div class="text-center d-flex flex-column flex-md-row botoes">
                 <div class="mx-3 mt-2">
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#EditarModal"
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EditarModal"
                     id="btnEditar">Editar</button>
                 </div>
                 <div class="mx-3 mt-2">
@@ -165,6 +165,12 @@
                       <div class="row">
                         <div class="col-md-6 ">
                           <!-- Primeira coluna -->
+                          <div class="form-group mb-3">
+                            <label for="nomeCompletoEditar">Nome Completo</label>
+                            <input id="nomeCompletoEditar" type="text" class="form-control"
+                              required>
+                          </div>
+
                           <div class="form-group mb-3">
                             <label for="cpfEditar">CPF</label>
                             <input id="cpfEditar" type="text" class="form-control" placeholder="000.000.000-00"
@@ -215,17 +221,22 @@
                           </div>
 
                           <div class="form-group mb-3">
-                            <label>Disponibilidade:</label>
+                            <label for="disponibilidadePerfil">Disponibilidade Atual:</label>
+                            <input type="text" class="form-control" id="disponibilidadeEditar" disabled="disabled" />
+                          </div>
+
+                          <div class="form-group mb-3">
+                            <label>Atualizar Disponibilidade:</label><br>
                             <div class="form-check form-check-inline">
-                              <input type="checkbox" class="form-check-input" value="Manhã" id="manhaCheckbox" />
+                              <input type="checkbox" class="form-check-input" value="Manhã" id="manhaCheckboxEditar"/>
                               <label class="form-check-label" for="manhaCheckbox">Manhã</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input type="checkbox" class="form-check-input" value="Tarde" id="tardeCheckbox" />
+                              <input type="checkbox" class="form-check-input" value="Tarde" id="tardeCheckboxEditar" />
                               <label class="form-check-label" for="tardeCheckbox">Tarde</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input type="checkbox" class="form-check-input" value="Noite" id="noiteCheckbox" />
+                              <input type="checkbox" class="form-check-input" value="Noite" id="noiteCheckboxEditar" />
                               <label class="form-check-label" for="noiteCheckbox">Noite</label>
                             </div>
                           </div>
@@ -233,7 +244,7 @@
                         </div>
                       </div>
                       <div class="text-center">
-                        <button onsubmit="nomeDaFuncao()" class="btn btn-primary">Salvar</button>
+                        <button type="button" id="buttonSalvarEdicao" class="btn btn-primary" data-dismiss="modal">Salvar</button>
                       </div>
                     </form>
 
