@@ -13,6 +13,22 @@ const mudancaDePagina = () => {
 }
 document.addEventListener('DOMContentLoaded', mudancaDePagina);
 
+//logout Admin
+const sairDoPerfilAdmin = () => {
+    let confirma = window.confirm("Deseja realmente sair do seu perfil ?");
+
+    if (confirma) {
+        localStorage.removeItem('adminLogado');
+        window.location.href = 'loginAdmin.html';
+    }
+}
+
+let logoutAdmin = document.getElementById('logoutAdmin');
+
+logoutAdmin.addEventListener('click', () => {
+    sairDoPerfilAdmin();
+})
+
 // let adminlogado = localStorage.getItem('adminLogado');
 
 // const mudancaDePaginaAdmin = () => {

@@ -35,11 +35,28 @@ const limparCamposLoginAdmin = () => {
 
 let adminlogado = localStorage.getItem('adminLogado');
 
-const mudancaDePagina = () => {
+const mudancaDePaginaLog = () => {
     if (adminlogado) {
         // document.getElementById('loginBody').innerHTML = 'Página não encontrada';
         window.alert("Você já está logado!");
         window.location.href = 'adminPage.html';
+    }
+}
+document.addEventListener('DOMContentLoaded', mudancaDePaginaLog);
+
+let logado = localStorage.getItem('logado');
+
+const mudancaDePagina = () => {
+    if (logado) {
+        document.getElementById('loginMenu').innerHTML = `<a
+    href="perfilUser.html"
+    class="nav-link text-white text-decoration-underline"
+    >Perfil</a
+  >`;
+
+        document.getElementById('cadastroAdmin').innerHTML = '';
+
+        // document.getElementById('linkPaginaInicial').href = "#";
     }
 }
 document.addEventListener('DOMContentLoaded', mudancaDePagina);
