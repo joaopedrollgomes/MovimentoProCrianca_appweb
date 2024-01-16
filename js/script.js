@@ -240,5 +240,23 @@ const mudancaDePaginaAdminLogado = () => {
     }
 }
 
-document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
-document.addEventListener('DOMContentLoaded', mudancaDePagina);
+const mudancaDePaginaPerfil = () => {
+    if (logado) {
+        document.getElementById('loginMenu').innerHTML = `<a
+    href="perfilUser.html"
+    class="nav-link text-white text-decoration-underline"
+    >Perfil</a
+  >`;
+    }
+}
+
+
+if(logado && adminlogado){
+
+    document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
+    document.addEventListener('DOMContentLoaded', mudancaDePaginaPerfil);
+}
+else{
+
+    document.addEventListener('DOMContentLoaded', mudancaDePagina);
+}

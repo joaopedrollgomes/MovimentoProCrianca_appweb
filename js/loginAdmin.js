@@ -55,8 +55,6 @@ const mudancaDePagina = () => {
   >`;
 
         document.getElementById('cadastroAdmin').innerHTML = '';
-
-        // document.getElementById('linkPaginaInicial').href = "#";
     }
 }
 document.addEventListener('DOMContentLoaded', mudancaDePagina);

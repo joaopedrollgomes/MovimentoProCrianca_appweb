@@ -7,8 +7,6 @@ const mudancaDePagina = () => {
     class="nav-link text-white text-decoration-underline"
     >Perfil</a
   >`;
-
-        document.getElementById('linkPaginaInicial').href = "#";
     }
 }
 document.addEventListener('DOMContentLoaded', mudancaDePagina);

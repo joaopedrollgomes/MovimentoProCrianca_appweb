@@ -11,13 +11,7 @@ $(document).ready(function () {
     $('#dataNascimentoPerfil').inputmask('99/99/9999');
 });
 
-let logado = localStorage.getItem('logado');
-
 const dadosPerfilAluno = () => {
-
-    if (logado) {
-        document.getElementById('linkPaginaInicial').href = "#";
-    }
 
     //Recuperando indice
     let indiceAlunoLogado = localStorage.getItem('indice');
@@ -172,7 +166,14 @@ buttonSairPerfil.addEventListener('click', () => {
     sairDoPerfil();
 })
 
+let logado = localStorage.getItem('logado');
 let adminlogado = localStorage.getItem('adminLogado');
+
+const mudancaDePaginaPerfilLogado = () => {
+    if (logado) {
+        document.getElementById('linkPaginaInicial').href = "#";
+    }
+}
 
 const mudancaDePaginaAdminLogado = () => {
     if (adminlogado) {
@@ -182,7 +183,17 @@ const mudancaDePaginaAdminLogado = () => {
     >Portal do colaborador</a
   >`;
 
+  document.getElementById('cadastroPerfil').innerHTML = `<a
+    href="index.html"
+    class="nav-link text-white text-decoration-underline"
+    >Cadastro</a
+  >`;
     }
 }
 
-document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
+if(logado && adminlogado){
+    document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
+}
+else{
+    document.addEventListener('DOMContentLoaded', mudancaDePaginaPerfilLogado);
+}
