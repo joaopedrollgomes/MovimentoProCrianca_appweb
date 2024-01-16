@@ -19,7 +19,6 @@ const login = () => {
     let cpfLogin = document.getElementById('cpfLogin').value;
     let senhaLogin = document.getElementById('senhaLogin').value;
     let indiceDoAluno = listaDeAlunosLocal.findIndex(aluno => aluno.cpf === cpfLogin);
-    console.log(listaDeAlunosLocal);
     //Verifica se o aluno existe
     if (indiceDoAluno !== -1) {
         if (senhaLogin === listaDeAlunosLocal[indiceDoAluno]._senha && cpfLogin === listaDeAlunosLocal[indiceDoAluno].cpf) {
@@ -51,4 +50,19 @@ const mudancaDePagina = () => {
         window.location.href = 'perfilUser.html';
     }
 }
+
+let adminlogado = localStorage.getItem('adminLogado');
+
+const mudancaDePaginaAdminLogado = () => {
+    if (adminlogado) {
+        document.getElementById('portalDoColaboradorLogado').innerHTML = `<a
+        href="adminPage.html"
+        class="nav-link text-white text-decoration-underline"
+        >Portal do colaborador</a
+        >`;
+        
+    }
+}
+
 document.addEventListener('DOMContentLoaded', mudancaDePagina);
+document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);

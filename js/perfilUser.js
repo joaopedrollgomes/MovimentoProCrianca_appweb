@@ -42,24 +42,7 @@ const dadosPerfilAluno = () => {
 
 document.addEventListener('DOMContentLoaded', dadosPerfilAluno);
 
-
-// $(document).ready(function () {
-//     $("#btnEditar").click(function (e) {
-//         e.preventDefault();
-
-//         $("#nomeCompletoEditar").val($("#nomeCompletoPerfil").text());
-//         $("#cpfEditar").val($("#cpfPerfil").val());
-//         $("#dataNascimentoEditar").val($("#dataNascimentoPerfil").val());
-//         $('#telefoneEditar').val($("#telefonePerfil").val())
-//         $('#emailEditar').val($("#emailPerfil").val())
-//         $('#cidadeEditar').val($("#cidadePerfil").val())
-//         $('#bairroEditar').val($("#bairroPerfil").val())
-//         $('#areaInteresseEditar').val($("#areaInteressePerfil").val())
-//         $('#disponibilidadeEditar').val($("#disponibilidadePerfil").val())
-//     });
-
-
-// });
+//abrindo modal de edição
 document.addEventListener('DOMContentLoaded', function () {
     let btnEditar = document.getElementById('btnEditar');
 
@@ -87,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let areaInteressePerfil = document.getElementById('areaInteressePerfil');
             let disponibilidadePerfil = document.getElementById('disponibilidadePerfil');
 
+            //confere se todos os dados estão armazenados
             if (nomeCompletoEditar && cpfEditar && dataNascimentoEditar && telefoneEditar && emailEditar &&
                 cidadeEditar && bairroEditar && areaInteresseEditar && disponibilidadeEditar &&
                 nomeCompletoPerfil && cpfPerfil && dataNascimentoPerfil && telefonePerfil && emailPerfil &&
@@ -150,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     listaDeAlunosLocal[indiceAlunoLogado].disponibilidade = novaDisponibilidade;
                 }
 
-                localStorage.setItem('funcionou', true);
                 localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunosLocal));
                 window.location.href = 'perfilUser.html';
             };
@@ -162,26 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
-// const editarPerfil = () => {
-//     // let indiceAlunoLogado = localStorage.getItem('indice');
-//     // const listaDeAlunosLocal = JSON.parse(localStorage.getItem('listaDeAlunos'));
-
-//     // // Preencher os campos do formulário com os dados do aluno logado
-//     // listaDeAlunosLocal[indiceAlunoLogado].nomeCompleto = document.getElementById('nomeCompletoEditar').value;
-
-//     // listaDeAlunosLocal[indiceAlunoLogado].cpf = document.getElementById('cpfEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].dataNascimento = document.getElementById('dataNascimentoEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].email = document.getElementById('emailEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].telefone = document.getElementById('telefoneEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].cidade = document.getElementById('cidadeEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].bairro = document.getElementById('bairroEditar').value;
-//     // listaDeAlunosLocal[indiceAlunoLogado].areaInteresse = document.getElementById('areaInteresseEditar').value;
-
-//     localStorage.setItem('funcionou', true);
-//     // localStorage.setItem('listaDeAlunos', JSON.stringify(listaDeAlunosLocal));
-// };
 
 const sairDoPerfil = () => {
     let confirma = window.confirm("Deseja realmente sair do seu perfil ?");
@@ -208,3 +171,18 @@ let buttonSairPerfil = document.getElementById('buttonSairPerfil');
 buttonSairPerfil.addEventListener('click', () => {
     sairDoPerfil();
 })
+
+let adminlogado = localStorage.getItem('adminLogado');
+
+const mudancaDePaginaAdminLogado = () => {
+    if (adminlogado) {
+        document.getElementById('portalDoColaboradorLogado').innerHTML = `<a
+    href="adminPage.html"
+    class="nav-link text-white text-decoration-underline"
+    >Portal do colaborador</a
+  >`;
+
+    }
+}
+
+document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);

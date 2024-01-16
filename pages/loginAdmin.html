@@ -9,7 +9,7 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" href="/css/styles.css" />
-  <title>Login do usuário pró-criança</title>
+  <title>Login Colaborador</title>
 </head>
 <body id="loginBody">
   <nav
@@ -52,7 +52,7 @@
               >Quem somos</a
             >
           </li>
-          <li class="nav-item" id="portalDoColaboradorLogado">
+          <li class="nav-item">
             <a href="loginAdmin.html" class="nav-link text-white text-decoration-underline">Portal do colaborador</a>
             >
           </li>
@@ -67,27 +67,26 @@
         class="card-header text-center text-white"
         style="background-color: #12567d"
       >
-        <h3>Login</h3>
+        <h3>Login Colaborador</h3>
       </div>
       <div class="card-body">
-        <form onsubmit="login(); return false;">
+        <form id="adminLoginForm">
           <div class="col-md-6 offset-md-3">
 
             <div class="form-group mb-3">
-              <label for="cpfLogin">CPF</label>
+              <label for="loginAdmin">Login</label>
               <input
-                id="cpfLogin"
+                id="loginAdmin"
                 type="text"
                 class="form-control"
-                placeholder="000.000.000-00"
                 required
               />
             </div>
 
             <div class="form-group mb-3">
-              <label for="senhaLogin">Senha</label>
+              <label for="senhaLoginAdmin">Senha</label>
               <input
-                id="senhaLogin"
+                id="senhaLoginAdmin"
                 type="password"
                 class="form-control"
                 required
@@ -97,18 +96,8 @@
             <div class="text-center">
               <button type="submit" class="btn btn-success">Entrar</button>
             </div>
-          </div>
-          
+          </div>  
         </form>
-        <span class="text-center d-flex justify-content-center mt-3"
-          >Ainda não possui uma conta?
-          <a href="index.html" class="ms-1">Cadastre-se</a></span
-        >
-        <span class="text-center d-flex justify-content-center mt-3"
-          >Esqueceu a senha?<a href="esqueciSenha.html" class="ms-1"
-            >Clique aqui</a
-          ></span
-        >
       </div>
     </div>
   </div>
@@ -124,7 +113,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-  <script src="/js/login.js"></script>
+  <script src="/js/loginAdmin.js"></script>
 </body>
 </html>

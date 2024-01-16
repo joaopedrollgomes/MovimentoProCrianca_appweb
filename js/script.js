@@ -225,4 +225,20 @@ const mudancaDePagina = () => {
         window.location.href = 'perfilUser.html';
     }
 }
+
+
+let adminlogado = localStorage.getItem('adminLogado');
+
+const mudancaDePaginaAdminLogado = () => {
+    if (adminlogado) {
+        document.getElementById('portalDoColaboradorLogado').innerHTML = `<a
+    href="adminPage.html"
+    class="nav-link text-white text-decoration-underline"
+    >Portal do colaborador</a
+  >`;
+
+    }
+}
+
+document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
 document.addEventListener('DOMContentLoaded', mudancaDePagina);

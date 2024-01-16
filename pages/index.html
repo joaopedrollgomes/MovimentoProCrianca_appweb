@@ -56,50 +56,14 @@
                 >Quem somos</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="portalDoColaboradorLogado">
               <a
-                href="#"
-                class="nav-link text-white text-decoration-underline" data-toggle="modal" data-target="#ColaboradorModal"
+                href="loginAdmin.html"
+                class="nav-link text-white text-decoration-underline"
                 >Portal do colaborador</a
               >
             </li>
           </ul>
-        </div>
-      </div>
-      <div class="modal mt-5" id="ColaboradorModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header text-center text-white" style="background-color: #12567d;">
-              <h3 class="modal-title">
-                Login colaborador
-              </h3>
-              <button
-              type="button"
-              class="btn btn-secondary close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-              <form onsubmit="nomeDaFuncao()">
-                <div class="col-md-6 offset-md-3">
-                    <div class="form-group mb-3">
-                        <label for="cpfLoginColaborador">CPF</label>
-                        <input id="cpfLoginColaborador" type="text" class="form-control" placeholder="000.000.000-00" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="senhaLoginColaborador">Senha</label>
-                        <input id="senhaLoginColaborador" type="password" class="form-control" required>
-                    </div>
-                    <div class="text-center">
-                        <a href="/pages/pesquisa.html" class="btn btn-success">Entrar</a>
-                    </div>
-                </div>
-            </form>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
