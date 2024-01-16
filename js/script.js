@@ -214,7 +214,7 @@ const clearLocalStorage = () => {
     localStorage.clear();
 }
 
-// document.addEventListener('DOMContentLoaded', clearLocalStorage);
+document.addEventListener('DOMContentLoaded', clearLocalStorage);
 
 let logado = localStorage.getItem('logado');
 
@@ -225,7 +225,6 @@ const mudancaDePagina = () => {
         window.location.href = 'perfilUser.html';
     }
 }
-
 
 let adminlogado = localStorage.getItem('adminLogado');
 
@@ -249,7 +248,6 @@ const mudancaDePaginaPerfil = () => {
   >`;
     }
 }
-
 
 if(logado && adminlogado){
 
