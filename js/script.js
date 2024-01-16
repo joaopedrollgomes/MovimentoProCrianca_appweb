@@ -140,7 +140,7 @@ const addAluno = () => {
 
     let disponibilidade = [];
 
-    if (manha.checked && tarde.checked && noite.checked) {
+    if (manha.checked || tarde.checked || noite.checked) {
         document.getElementById("msgDisponibilidade").innerHTML = "";
 
         if (manha.checked && tarde.checked && noite.checked) {
