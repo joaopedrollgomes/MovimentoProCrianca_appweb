@@ -63,11 +63,12 @@
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-md-3">
+                <p>Pesquise por Disponibilidade ou Área de interesse</p>
                 <div class="search-box position-relative mt-3">
-                    <input type="text" class="search-txt form-control" placeholder="Pesquisar Alunos">
-                    <a href="#" class="search-btn">
+                    <input id="pesquisarAlunos" type="text" placeholder="Pesquisar Alunos">
+                    <button id="buttonpesquisarAlunos" type="button" class="search-btn">
                         <img src="/assets/loupe.png" alt="Lupa" height="20" width="20">
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -78,39 +79,8 @@
         <h2 class="text-center mt-5 mb-5">Alunos cadastrados</h2>
     </div>
 
-    <div class="row d-flex justify-content-evenly container-fluid">
-        <div class="card col-sm-6 col-md-4 col-lg-3 mb-3 p-2" style="width: 16rem;">
-            <img src="/assets/sem-foto.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class=" card col-sm-6 col-md-4 col-lg-3 mb-3 p-2" style="width: 16rem;">
-            <img src="/assets/sem-foto.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class=" card col-sm-6 col-md-4 col-lg-3 mb-3 p-2" style="width: 16rem;">
-            <img src="/assets/sem-foto.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class=" card col-sm-6 col-md-4 col-lg-3 mb-3 p-2" style="width: 16rem;">
-            <img src="/assets/sem-foto.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+    <div id="dadosAlunoBuscado" class="row d-flex justify-content-evenly container-fluid">
+        
     </div>
     
     <footer class="d-none d-sm-block mt-5">Copyright © 1993 - 2018 Movimento Pró-Criança. CNPJ:
