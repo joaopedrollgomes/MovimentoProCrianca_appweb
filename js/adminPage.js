@@ -99,6 +99,16 @@ function exibirResultados(resultados) {
         nomeAlunoH5.id = 'nomeAlunoSearch';
         nomeAlunoH5.textContent = aluno.nomeCompleto;
 
+        let telefoneAlunoP = document.createElement('p');
+        telefoneAlunoP.className = 'card-text';
+        telefoneAlunoP.id = 'areaAlunoSearch';
+        telefoneAlunoP.textContent = 'Telefone: ' + aluno.telefone;
+
+        let emailAlunoP = document.createElement('p');
+        emailAlunoP.className = 'card-text';
+        emailAlunoP.id = 'areaAlunoSearch';
+        emailAlunoP.textContent = 'Email: ' + aluno.email;
+
         let areaAlunoP = document.createElement('p');
         areaAlunoP.className = 'card-text';
         areaAlunoP.id = 'areaAlunoSearch';
@@ -109,19 +119,12 @@ function exibirResultados(resultados) {
         disponibilidadeAlunoP.id = 'disponibilidadeAlunoSearch';
         disponibilidadeAlunoP.textContent = 'Disponibilidade: ' + aluno.disponibilidade;
 
-        let perfilButton = document.createElement('button');
-        perfilButton.type = 'button';
-        perfilButton.id = 'btnPerfil'
-        perfilButton.className = 'btn btn-success';
-        perfilButton.textContent = 'Perfil';
-        perfilButton.setAttribute('data-toggle', 'modal');
-        perfilButton.setAttribute('data-target', '#PerfilModal');
-
         // Adiciona os elementos criados ao DOM
         cardBodyDiv.appendChild(nomeAlunoH5);
+        cardBodyDiv.appendChild(telefoneAlunoP);
+        cardBodyDiv.appendChild(emailAlunoP);
         cardBodyDiv.appendChild(areaAlunoP);
         cardBodyDiv.appendChild(disponibilidadeAlunoP);
-        cardBodyDiv.appendChild(perfilButton);
 
         cardDiv.appendChild(cardBodyDiv);
         dadosAlunoBuscado.appendChild(cardDiv);

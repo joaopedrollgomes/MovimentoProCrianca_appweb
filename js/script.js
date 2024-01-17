@@ -118,7 +118,7 @@ class Aluno {
 }
 
 //Onde cada aluno será armazenado.
-const listaDeAlunos = [];
+// const listaDeAlunos = [];
 
 //Captando os dados fornecidos
 const addAluno = () => {
@@ -167,6 +167,7 @@ const addAluno = () => {
 
         let aluno = new Aluno(cpf, nomeCompleto, dataNascimento, telefone, email, cidade, bairro, disponibilidade, senha, areaInteresse, termosDeUso);
 
+        let listaDeAlunos = JSON.parse(localStorage.getItem('listaDeAlunos')) || [];
         //Add Aluno à lista
         listaDeAlunos.push(aluno);
 
@@ -253,6 +254,9 @@ if(logado && adminlogado){
 
     document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
     document.addEventListener('DOMContentLoaded', mudancaDePaginaPerfil);
+}
+else if(adminlogado){
+    document.addEventListener('DOMContentLoaded', mudancaDePaginaAdminLogado);
 }
 else{
 
