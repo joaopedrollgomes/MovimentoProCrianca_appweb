@@ -214,7 +214,7 @@ const clearLocalStorage = () => {
     localStorage.clear();
 }
 
-document.addEventListener('DOMContentLoaded', clearLocalStorage);
+// document.addEventListener('DOMContentLoaded', clearLocalStorage);
 
 let logado = localStorage.getItem('logado');
 

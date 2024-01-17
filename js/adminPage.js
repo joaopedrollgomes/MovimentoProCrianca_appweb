@@ -35,20 +35,48 @@ pesquisarButton.addEventListener('click', function () {
     // Obtém o valor do input de pesquisa
     let termoPesquisa = pesquisarInput.value.toLowerCase();
 
+    // Obtém os valores dos checkboxes de disponibilidade
+    let manhaCheckbox = document.getElementById('manhaCheckboxPesquisa');
+    let tardeCheckbox = document.getElementById('tardeCheckboxPesquisa');
+    let noiteCheckbox = document.getElementById('noiteCheckboxPesquisa');
+
+    let disponibilidadeSelecionada = [];
+
+    if (manhaCheckbox.checked && tardeCheckbox.checked && noiteCheckbox.checked) {
+        disponibilidadeSelecionada.push(manhaCheckbox.value, tardeCheckbox.value, noiteCheckbox.value);
+    }
+    else if (manhaCheckbox.checked && tardeCheckbox.checked) {
+        disponibilidadeSelecionada.push(manhaCheckbox.value, tardeCheckbox.value);
+    }
+    else if (manhaCheckbox.checked && noiteCheckbox.checked) {
+        disponibilidadeSelecionada.push(manhaCheckbox.value, noiteCheckbox.value);
+    }
+    else if (tardeCheckbox.checked && noiteCheckbox.checked) {
+        disponibilidadeSelecionada.push(tardeCheckbox.value, noiteCheckbox.value);
+    }
+    else if (manhaCheckbox.checked) {
+        disponibilidadeSelecionada.push(manhaCheckbox.value);
+    }
+    else if (tardeCheckbox.checked) {
+        disponibilidadeSelecionada.push(tardeCheckbox.value);
+    }
+    else if (noiteCheckbox.checked) {
+        disponibilidadeSelecionada.push(noiteCheckbox.value);
+    }
+
     // Verifica se o termo de pesquisa não está vazio
-    if (termoPesquisa.trim() !== '') {
+    if (termoPesquisa.trim() !== '' && disponibilidadeSelecionada.length > 0) {
         // Obtém a lista de alunos do localStorage
         let listaDeAlunos = JSON.parse(localStorage.getItem('listaDeAlunos'));
 
         // Filtra os alunos com base na disponibilidade ou área de interesse
         let resultados = listaDeAlunos.filter(function (aluno) {
-            return aluno.disponibilidade.includes(termoPesquisa) ||
-                aluno.areaInteresse.toLowerCase().includes(termoPesquisa);
+            return aluno.areaInteresse.toLowerCase() === termoPesquisa &&
+                aluno.disponibilidade.some(disponibilidade => disponibilidadeSelecionada.includes(disponibilidade));
         });
 
         // Exibe os resultados na página
         exibirResultados(resultados);
-        console.log(pesquisarInput.value);
     } else {
         window.alert('Digite a área de interesse ou disponibilidade');
     }
@@ -82,8 +110,12 @@ function exibirResultados(resultados) {
         disponibilidadeAlunoP.textContent = 'Disponibilidade: ' + aluno.disponibilidade;
 
         let perfilButton = document.createElement('button');
+        perfilButton.type = 'button';
+        perfilButton.id = 'btnPerfil'
         perfilButton.className = 'btn btn-success';
         perfilButton.textContent = 'Perfil';
+        perfilButton.setAttribute('data-toggle', 'modal');
+        perfilButton.setAttribute('data-target', '#PerfilModal');
 
         // Adiciona os elementos criados ao DOM
         cardBodyDiv.appendChild(nomeAlunoH5);
