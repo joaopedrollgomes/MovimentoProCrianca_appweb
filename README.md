@@ -1,5 +1,11 @@
 # Movimento Pró-Criança - Aplicação de Cadastro para Banco de Talentos
 
+### Equipe 
+
+| <img src="assets/Danilo.jpeg" width=100 > | <img src="assets/Edenize.jpeg" width=100 > | <img src="assets/Ednaldo.jpeg" width=100> | <img src="assets/João Pedro.jpeg" width=100> | <img src="assets/Marcela.jpeg" width=100> | <img src="assets/Rayanne.jpeg" width=100> |
+| ---------------------------------------- | --------------------------------------- | -------------------------------------- | ----------------------------------------- | -------------------------------------- | ---------------------------------------- |
+| Danilo José - Líder técnico               | Edenize Monteiro - Desenvolvedora        | Ednaldo Pereira - Desenvolvedor         | João Pedro - Scrum Master/Git manager/Desenvolvedor    | Marcela Ellen - Líder de design/Git manager/Desenvolvedora   | Rayanne Santos - Tester           |
+
 ## Descrição do Projeto
 
 O projeto consiste no desenvolvimento de uma aplicação web dedicada ao cadastro e gerenciamento do Banco de Talentos do Movimento Pró-Criança (MPC). O objetivo principal é facilitar a identificação e encaminhamento de beneficiários (alunos) para cursos e oportunidades no mercado de trabalho, fortalecendo assim o apoio oferecido pelo MPC.
@@ -33,14 +39,7 @@ O projeto consiste no desenvolvimento de uma aplicação web dedicada ao cadastr
 
 - A aplicação será desenvolvida utilizando tecnologias web modernas como, HTML, CSS, Javascript e Bootstrap, garantindo uma experiência responsiva e acessível.
 
-### Próximos Passos
+### Passo a Passo
 
 O desenvolvimento do projeto seguirá um cronograma definido, envolvendo etapas de concepção, design, implementação e testes, será utilizado a plataforma Trello e adotaremos a metodologia ágil de gestão SCRUM. A colaboração com a equipe do MPC garantirá que a aplicação atenda de maneira eficaz às necessidades específicas do Movimento Pró-Criança.
-
-### Equipe 
-
-| <img src="assets/Danilo.jpeg" width=100 > | <img src="assets/Edenize.jpeg" width=100 > | <img src="assets/Ednaldo.jpeg" width=100> | <img src="assets/João Pedro.jpeg" width=100> | <img src="assets/Marcela.jpeg" width=100> | <img src="assets/Rayanne.jpeg" width=100> |
-| ---------------------------------------- | --------------------------------------- | -------------------------------------- | ----------------------------------------- | -------------------------------------- | ---------------------------------------- |
-| Danilo José - Líder técnico               | Edenize Monteiro - Desenvolvedor        | Ednaldo Pereira - Desenvolvedor         | João Pedro - Scrum Master/Git manager    | Marcela Ellen - Líder de design/Git manager   | Rayanne Santos - Tester           |
-
 
